@@ -4,9 +4,10 @@ import { Todo } from "./Todo";
 import "./App.css";
 
 function App() {
+  //stateに型を定義
   const [todos, setTodos] = useState<TodoType[]>([]);
 
-  //stateの型定義
+  //1件分のtodoの型定義
   type TodoType = {
     userId: number;
     id: number;
