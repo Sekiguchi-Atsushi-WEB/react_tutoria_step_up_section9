@@ -1,9 +1,10 @@
 import "./App.css";
+import { Practice1 } from "./practices/Practice1";
 
 function App() {
   return (
     <>
-      <h1>Vite + React</h1>
+      <Practice1 />
     </>
   );
 }
