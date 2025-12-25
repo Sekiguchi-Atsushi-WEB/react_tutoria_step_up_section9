@@ -1,19 +1,12 @@
 import axios from "axios";
 import { useState } from "react";
 import { Todo } from "./Todo";
+import type { TodoType } from "./types/todo";
 import "./App.css";
 
 function App() {
   //stateに型を定義
   const [todos, setTodos] = useState<TodoType[]>([]);
-
-  //1件分のtodoの型定義
-  type TodoType = {
-    userId: number;
-    id: number;
-    title: string;
-    completed: boolean;
-  };
 
   // JSONデータ取得
   const onClickFetchData = () => {
