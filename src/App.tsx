@@ -3,7 +3,15 @@ import { useState } from "react";
 import { Todo } from "./Todo";
 import { Text } from "./Text";
 import type { TodoType } from "./types/todo";
+import { UserProfile } from "./UserProfile";
+import type { User } from "./types/user";
 import "./App.css";
+
+//UserProfileコンポーネント用のダミーデータ
+const user: User = {
+  name: "山田太郎",
+  hobbies: ["映画鑑賞", "旅行", "読書"],
+};
 
 function App() {
   //stateに型を定義
@@ -21,6 +29,7 @@ function App() {
 
   return (
     <>
+      <UserProfile user={user} />
       <Text color="red" fontSize="20px" />
       <button onClick={onClickFetchData}>JSONデータ取得</button>
       {todos.map((todo) => (
