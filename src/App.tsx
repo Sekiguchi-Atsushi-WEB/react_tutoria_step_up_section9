@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { Todo } from "./Todo";
+import { Text } from "./Text";
 import type { TodoType } from "./types/todo";
 import "./App.css";
 
@@ -20,6 +21,7 @@ function App() {
 
   return (
     <>
+      <Text color="red" fontSize="20px" />
       <button onClick={onClickFetchData}>JSONデータ取得</button>
       {todos.map((todo) => (
         <Todo
